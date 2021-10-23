@@ -14,6 +14,18 @@ final class ViewController: UIViewController {
         setupEditButtonItem()
     }
 
+    override func setEditing(_ editing: Bool,
+                             animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        switch editing {
+        case true:
+            navigationItem.rightBarButtonItem?.title = "キャンセル"
+        case false:
+            navigationItem.rightBarButtonItem?.title = "編集"
+        }
+    }
+    
+    // MARK: setupEditButtonItem
     private func setupEditButtonItem() {
         navigationItem.rightBarButtonItem = editButtonItem
         navigationItem.rightBarButtonItem?.title = "編集"
