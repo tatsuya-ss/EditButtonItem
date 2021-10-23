@@ -7,13 +7,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        setupEditButtonItem()
     }
 
-
+    private func setupEditButtonItem() {
+        navigationItem.rightBarButtonItem = editButtonItem
+        navigationItem.rightBarButtonItem?.title = "編集"
+    }
+    
 }
+
 
